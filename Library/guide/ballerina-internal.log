@@ -1,0 +1,106 @@
+[2019-09-30 00:28:16,615] ERROR {org.ballerinalang.net.jms.JmsUtils} - Error while connecting to broker. 
+javax.naming.NoInitialContextException: Cannot instantiate class: org.apache.activemq.jndi.ActiveMQInitialContextFactory [Root exception is java.lang.ClassNotFoundException: org.apache.activemq.jndi.ActiveMQInitialContextFactory]
+	at javax.naming.spi.NamingManager.getInitialContext(NamingManager.java:674)
+	at javax.naming.InitialContext.getDefaultInitCtx(InitialContext.java:313)
+	at javax.naming.InitialContext.init(InitialContext.java:244)
+	at javax.naming.InitialContext.<init>(InitialContext.java:216)
+	at org.ballerinalang.net.jms.JmsUtils.createConnection(JmsUtils.java:115)
+	at org.ballerinalang.net.jms.nativeimpl.endpoint.connection.CreateConnection.execute(CreateConnection.java:60)
+	at org.ballerinalang.bre.bvm.BVM.invokeNativeCallable(BVM.java:896)
+	at org.ballerinalang.bre.bvm.BVM.invokeCallable(BVM.java:858)
+	at org.ballerinalang.bre.bvm.BVM.invokeVirtualFunction(BVM.java:3348)
+	at org.ballerinalang.bre.bvm.BVM.execute(BVM.java:428)
+	at org.ballerinalang.bre.bvm.BVMScheduler.execute(BVMScheduler.java:72)
+	at org.ballerinalang.bre.bvm.BVMExecutor.execute(BVMExecutor.java:184)
+	at org.ballerinalang.bre.bvm.BVMExecutor.invokePackageInitFunctions(BVMExecutor.java:267)
+	at org.ballerinalang.bre.bvm.BVMExecutor.initProgramFile(BVMExecutor.java:61)
+	at org.ballerinalang.BLangProgramRunner.runService(BLangProgramRunner.java:53)
+	at org.ballerinalang.launcher.LauncherUtils.runServices(LauncherUtils.java:147)
+	at org.ballerinalang.launcher.LauncherUtils.runBal(LauncherUtils.java:411)
+	at org.ballerinalang.launcher.LauncherUtils.runProgram(LauncherUtils.java:106)
+	at org.ballerinalang.launcher.Main$RunCmd.execute(Main.java:267)
+	at java.util.Optional.ifPresent(Optional.java:159)
+	at org.ballerinalang.launcher.Main.main(Main.java:63)
+Caused by: java.lang.ClassNotFoundException: org.apache.activemq.jndi.ActiveMQInitialContextFactory
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at com.sun.naming.internal.VersionHelper12.loadClass(VersionHelper12.java:91)
+	at com.sun.naming.internal.VersionHelper12.loadClass(VersionHelper12.java:61)
+	at javax.naming.spi.NamingManager.getInitialContext(NamingManager.java:672)
+	... 20 more
+ 
+[2019-09-30 00:33:41,254] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-09-30 00:38:13,890] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-09-30 01:24:49,105] ERROR {org.ballerinalang.net.http.HttpConnectorPortBindingListener} - Error in http endpoint 
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at io.netty.channel.socket.nio.NioServerSocketChannel.doBind(NioServerSocketChannel.java:130)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.bind(AbstractChannel.java:563)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.bind(DefaultChannelPipeline.java:1332)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeBind(AbstractChannelHandlerContext.java:488)
+	at io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:473)
+	at io.netty.channel.DefaultChannelPipeline.bind(DefaultChannelPipeline.java:984)
+	at io.netty.channel.AbstractChannel.bind(AbstractChannel.java:259)
+	at io.netty.bootstrap.AbstractBootstrap$2.run(AbstractBootstrap.java:366)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:495)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:905)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+ 
+[2019-09-30 01:27:22,795] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-09-30 01:55:38,193] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-09-30 01:59:25,229] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-09-30 02:03:30,409] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-09-30 02:04:04,494] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-09-30 02:09:30,891] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-09-30 02:18:30,693] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-09-30 02:21:54,986] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-09-30 02:29:40,286] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-09-30 02:45:29,172] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-09-30 02:58:05,514] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-09-30 03:00:33,679] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-09-30 03:22:32,572] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-09-30 03:41:23,502] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-09-30 11:42:31,153] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-09-30 11:44:57,774] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-09-30 11:56:14,390] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-09-30 12:29:15,106] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-09-30 12:32:48,498] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-09-30 13:18:41,703] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-09-30 13:22:05,527] ERROR {org.ballerinalang.net.jms.LoggingExceptionListener} - Connection exception received. 
+javax.jms.JMSException: Connection reset
+	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:54)
+	at org.apache.activemq.ActiveMQConnection.onAsyncException(ActiveMQConnection.java:1960)
+	at org.apache.activemq.ActiveMQConnection.onException(ActiveMQConnection.java:1979)
+	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:114)
+	at org.apache.activemq.transport.ResponseCorrelator.onException(ResponseCorrelator.java:126)
+	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:114)
+	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:114)
+	at org.apache.activemq.transport.WireFormatNegotiator.onException(WireFormatNegotiator.java:173)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.onException(AbstractInactivityMonitor.java:345)
+	at org.apache.activemq.transport.TransportSupport.onException(TransportSupport.java:96)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:219)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.activemq.transport.tcp.TcpBufferedInputStream.fill(TcpBufferedInputStream.java:50)
+	at org.apache.activemq.transport.tcp.TcpTransport$2.fill(TcpTransport.java:634)
+	at org.apache.activemq.transport.tcp.TcpBufferedInputStream.read(TcpBufferedInputStream.java:59)
+	at org.apache.activemq.transport.tcp.TcpTransport$2.read(TcpTransport.java:619)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at org.apache.activemq.openwire.OpenWireFormat.unmarshal(OpenWireFormat.java:268)
+	at org.apache.activemq.transport.tcp.TcpTransport.readCommand(TcpTransport.java:240)
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:232)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:215)
+	... 1 more
+ 

@@ -1,0 +1,37 @@
+[2019-09-30 01:28:53,600] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-09-30 01:55:53,744] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-09-30 02:01:08,100] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-09-30 02:04:10,919] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-09-30 02:09:36,892] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-09-30 02:18:40,701] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-09-30 02:21:59,398] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-09-30 11:44:14,645] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-09-30 13:19:53,690] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-09-30 13:22:05,527] ERROR {org.ballerinalang.net.jms.LoggingExceptionListener} - Connection exception received. 
+javax.jms.JMSException: Connection reset
+	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:54)
+	at org.apache.activemq.ActiveMQConnection.onAsyncException(ActiveMQConnection.java:1960)
+	at org.apache.activemq.ActiveMQConnection.onException(ActiveMQConnection.java:1979)
+	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:114)
+	at org.apache.activemq.transport.ResponseCorrelator.onException(ResponseCorrelator.java:126)
+	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:114)
+	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:114)
+	at org.apache.activemq.transport.WireFormatNegotiator.onException(WireFormatNegotiator.java:173)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.onException(AbstractInactivityMonitor.java:345)
+	at org.apache.activemq.transport.TransportSupport.onException(TransportSupport.java:96)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:219)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.activemq.transport.tcp.TcpBufferedInputStream.fill(TcpBufferedInputStream.java:50)
+	at org.apache.activemq.transport.tcp.TcpTransport$2.fill(TcpTransport.java:634)
+	at org.apache.activemq.transport.tcp.TcpBufferedInputStream.read(TcpBufferedInputStream.java:59)
+	at org.apache.activemq.transport.tcp.TcpTransport$2.read(TcpTransport.java:619)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at org.apache.activemq.openwire.OpenWireFormat.unmarshal(OpenWireFormat.java:268)
+	at org.apache.activemq.transport.tcp.TcpTransport.readCommand(TcpTransport.java:240)
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:232)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:215)
+	... 1 more
+ 
